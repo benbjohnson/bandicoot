@@ -19,7 +19,7 @@
 //
 //==============================================================================
 
-void bandicoot_sigsegv(int sig, struct __siginfo *info, void *uap);
+void bandicoot_sigsegv(int sig, siginfo_t *info, void *_uap);
 
 void bandicoot_print_backtrace(ucontext_t *uap);
 
@@ -67,7 +67,7 @@ void bandicoot_init()
 // uap  - The user thread context.
 //
 // Returns NULL.
-void bandicoot_sigsegv(int sig, struct __siginfo *info, void *_uap) {
+void bandicoot_sigsegv(int sig, siginfo_t *info, void *_uap) {
     ucontext_t *uap = (ucontext_t*)_uap;
     ((void) info);
 

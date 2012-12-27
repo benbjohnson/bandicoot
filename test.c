@@ -4,6 +4,9 @@
 int runBadCode()
 {
     int *ptr = NULL;
+    int a = 10;
+    int b = 11;
+    int c = 12;
     printf("Executing bad code.\n");
     return (*ptr)+1;
 }

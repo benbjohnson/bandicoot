@@ -2,7 +2,7 @@
 # Variables
 ################################################################################
 
-CFLAGS=-g -Wall -Wextra -std=c99
+CFLAGS=-g -Wall -Wextra -std=c99 -rdynamic
 SOURCES=bandicoot.c
 OBJECTS=$(patsubst %.c,%.o,${SOURCES})
 
